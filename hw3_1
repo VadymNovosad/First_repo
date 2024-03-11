@@ -1,0 +1,16 @@
+from datetime import datetime
+
+def get_days_from_today(date):
+
+    try:
+        date_string = '2019.10.09'
+        date = datetime.strptime(date_string, '%Y.%m.%d').date()
+        print(date)
+        current_date = datetime.today().date()
+        print(current_date)
+        delta_days = (current_date - date).days
+        print(delta_days)
+    except ValueError:
+        print(f'Incorrect format. Please, enter in number format "YYYY.MM.DD"')
+
+get_days_from_today(datetime)
